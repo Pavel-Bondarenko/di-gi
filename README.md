@@ -1,2 +1,4 @@
 # di-gi
-level 1.1 task 3
+The task 3 from level 1.1 HTML/CSS.
+
+Link on GitHub pages: 
