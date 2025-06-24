@@ -1,17 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header id="header">
+      <img
+        class="logo"
+        src="images/header-logo.png"
+        alt="DI GI logo"
+        width="104px"
+        height="64px"
+      />
+      <div class="dropbox">
+        <img
+          src="images/header-dropbox.svg"
+          alt="dropbox"
+          width="40px"
+          height="40px"
+        />
+      </div>
+    </header>
+    <!-- intro -->
+    <section id="intro">
+      <div class="arrows"></div>
+      <div class="slide-container">
+        <div class="slide">
+          <h1>ПРАЦЮЙ<br />ВІРТУАЛЬНО</h1>
+          <p>
+            Di Gi — це діджитал агенція повного циклу, спрямована на
+            найкращий<br />
+            результат наших клієнтів в маркетингу, продажах та управленні
+          </p>
+          <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
+        </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
+        <div class="slide">
+          <h1>МИСЛИ<br />ГЛОБАЛЬНО</h1>
+          <p>
+            Di Gi — це діджитал агенція повного циклу, спрямована на
+            найкращий<br />
+            результат наших клієнтів в маркетингу, продажах та управленні
+          </p>
+          <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
+        </div>
+
+        <div class="slide">
+          <h1>ЖИВИ<br />УНІКАЛЬНО</h1>
+          <p>
+            Di Gi — це діджитал агенція повного циклу, спрямована на
+            найкращий<br />
+            результат наших клієнтів в маркетингу, продажах та управленні
+          </p>
+          <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
+        </div>
+
+        <div class="pagination">
+          <div class="circle" onclick="currentSlide(1)"></div>
+          <div class="circle" onclick="currentSlide(2)"></div>
+          <div class="circle" onclick="currentSlide(3)"></div>
+        </div>
+      </div>
+      <div class="arrows">
+        <div class="arrow back" onclick="plusSlides(-1)">
+          <img
+            src="images/intro-back-arrow.svg"
+            alt="Back"
+            width="20"
+            height="20"
+          />
+        </div>
+        <div class="arrow forward" onclick="plusSlides(1)">
+          <img
+            src="images/intro-forward-arrow.svg"
+            alt="Forward"
+            width="20"
+            height="20"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- promo -->
+    <section id="promo">
+      <div class="promo-info">
+        <h3>Ви полюбите нас з першої зустрічі!</h3>
+        <p class="promo-info-p-two-lines">
+          Ми надаємо комплексний підхід до просування компанії, <br />
+          продуктів та послуг в цифровій сфері.
+        </p>
+        <p class="promo-info-p-four-lines">
+          Ми надаємо комплексний підхід до <br />
+          просування компанії, <br />
+          продуктів та послуг в цифровій <br />
+          сфері.
+        </p>
+      </div>
+      <a href="/"><div class="promo-button">ПЕРЕДЗВОНІТЬ МЕНІ</div></a>
+    </section>
+    <!-- service -->
+    <section id="service">
+      <div class="service-info">
+        <h2>Сервіс</h2>
+        <h3>Від ідеї до незабутнього та вимірюваного результату.</h3>
+        <hr />
+        <p>
+          Інтеграція бездоганного виробництва, передових технологій та
+          ретельного вимірювання продуктивності
+        </p>
+      </div>
+      <div class="services">
+        <div class="service-card">
+          <div class="card-content">
+            <img
+              src="images/service-strategy-icon.svg"
+              alt="Strategy"
+              width="64"
+              height="64"
+            />
+            <h3>СТРАТЕГІЯ</h3>
+            <p>Створимо продуктивну стратегію</p>
+            <a href="/">ДЕТАЛЬНІШЕ →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-content">
+            <img
+              src="images/service-analysis-icon.svg"
+              alt="Analysis"
+              width="64"
+              height="64"
+            />
+            <h3>АНАЛІЗ</h3>
+            <p>Проведемо розгорнутий аналіз</p>
+            <a href="/">ДЕТАЛЬНІШЕ →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-content">
+            <img
+              src="images/service-social-network-icon.svg"
+              alt="Social networks"
+              width="64"
+              height="64"
+            />
+            <h3>СОЦ МЕРЕЖІ</h3>
+            <p>Просунемо вас у соціальних мережах</p>
+            <a href="/">ДЕТАЛЬНІШЕ →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-content">
+            <img
+              src="images/service-development-icon.svg"
+              alt="Development"
+              width="64"
+              height="64"
+            />
+            <h3>РОЗВИТОК</h3>
+            <p>Розробимо сучасні додатки</p>
+            <a href="/">ДЕТАЛЬНІШЕ →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-content">
+            <img
+              src="images/service-content-icon.svg"
+              alt="Content"
+              width="64"
+              height="64"
+            />
+            <h3>КОНТЕНТ</h3>
+            <p>Створимо незабутній контент</p>
+            <a href="/">ДЕТАЛЬНІШЕ →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-content">
+            <img
+              src="images/service-design-icon.svg"
+              alt="Design"
+              width="64"
+              height="64"
+            />
+            <h3>ДИЗАЙН UX</h3>
+            <p>Створимо унікальний та зручний дизайн</p>
+            <a href="/">ДЕТАЛЬНІШЕ →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-content">
+            <img
+              src="images/service-publicity-icon.svg"
+              alt="Publicity"
+              width="64"
+              height="64"
+            />
+            <h3>
+              ТАРГЕТОВАНА <br />
+              РЕКЛАМА
+            </h3>
+            <p>Створимо рекламу на любий смак</p>
+            <a href="/">ДЕТАЛЬНІШЕ →</a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="card-content">
+            <img
+              src="images/service-product-icon.svg"
+              alt="Product"
+              width="64"
+              height="64"
+            />
+            <h3>ПРОДУКТ</h3>
+            <p>Створимо якісний продукт</p>
+            <a href="/">ДЕТАЛЬНІШЕ →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- recent work -->
+    <section id="recent-work">
+      <h2>Наші Проєкти</h2>
+      <hr />
+      <div class="project-container">
+        <div class="project">
+          <div class="project-icon">
+            <img
+              class="project-icon-picture"
+              src="images/recent-work-lalique.svg"
+              alt="Lalique"
+              width="268"
+              height="239"
+            />
+            <img
+              class="project-hover"
+              src="images/recent-work-hover-background.svg"
+              alt="hover"
+              width="243"
+              height="217"
+            />
+            <div class="project-hover-navigation">
+              <a href="/">
+                <img
+                  class="project-info-icon"
+                  src="images/recent-work-project-info-icon.svg"
+                  alt="info"
+                  width="28"
+                  height="28"
+                />
+              </a>
+              <a href="/">
+                <img
+                  class="project-search-icon"
+                  src="images/recent-work-project-search-icon.svg"
+                  alt="search"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </div>
+          </div>
+          <h3>Lalique бутик</h3>
+        </div>
+        <div class="project">
+          <div class="project-icon">
+            <img
+              class="project-icon-picture"
+              src="images/recent-work-project-building.svg"
+              alt="Lalique"
+              width="268"
+              height="239"
+            />
+            <img
+              class="project-hover"
+              src="images/recent-work-hover-background.svg"
+              alt="hover"
+              width="243"
+              height="217"
+            />
+            <div class="project-hover-navigation">
+              <a href="/">
+                <img
+                  class="project-info-icon"
+                  src="images/recent-work-project-info-icon.svg"
+                  alt="info"
+                  width="28"
+                  height="28"
+                />
+              </a>
+              <a href="/">
+                <img
+                  class="project-search-icon"
+                  src="images/recent-work-project-search-icon.svg"
+                  alt="search"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </div>
+          </div>
+          <h3>Будівництво домів</h3>
+        </div>
+        <div class="project">
+          <div class="project-icon">
+            <img
+              class="project-icon-picture"
+              src="images/recent-work-project-coffee.svg"
+              alt="Lalique"
+              width="268"
+              height="239"
+            />
+            <img
+              class="project-hover"
+              src="images/recent-work-hover-background.svg"
+              alt="hover"
+              width="243"
+              height="217"
+            />
+            <div class="project-hover-navigation">
+              <a href="/">
+                <img
+                  class="project-info-icon"
+                  src="images/recent-work-project-info-icon.svg"
+                  alt="info"
+                  width="28"
+                  height="28"
+                />
+              </a>
+              <a href="/">
+                <img
+                  class="project-search-icon"
+                  src="images/recent-work-project-search-icon.svg"
+                  alt="search"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </div>
+          </div>
+          <h3>Кавʼярня</h3>
+        </div>
+        <div class="project">
+          <div class="project-icon">
+            <img
+              class="project-icon-picture"
+              src="images/recent-work-project-tour.svg"
+              alt="Lalique"
+              width="268"
+              height="239"
+            />
+            <img
+              class="project-hover"
+              src="images/recent-work-hover-background.svg"
+              alt="hover"
+              width="243"
+              height="217"
+            />
+            <div class="project-hover-navigation">
+              <a href="/">
+                <img
+                  class="project-info-icon"
+                  src="images/recent-work-project-info-icon.svg"
+                  alt="info"
+                  width="28"
+                  height="28"
+                />
+              </a>
+              <a href="/">
+                <img
+                  class="project-search-icon"
+                  src="images/recent-work-project-search-icon.svg"
+                  alt="search"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </div>
+          </div>
+          <h3>Унікальні тури</h3>
+        </div>
+      </div>
+    </section>
+    <!-- video block -->
+    <section id="video-block">
+      <div class="video-block-image">
+        <img
+          src="images/video-block-image.svg"
+          alt="Comand"
+          width="460"
+          height="420"
+        />
+      </div>
+      <div class="video-block-info">
+        <h2>Команда</h2>
+        <hr />
+        <p>
+          Наша команда — це наша найбільша цінність. <br />
+          Ми наполегливо працювали, щоб створити групу експертів, чиї навички
+          доповнюють один одного. <br />
+          У членів нашої команди різні історії, але ми розділяємо загальну
+          пристрасть до ідеалу. <br />
+          Ми віримо, щоб залишатись професіоналом, потрібно розвиватись, тому ми
+          постійно шукаємо способи, як стати краще в тому, що ми робимо.
+        </p>
+      </div>
+      <div class="video-block-button">
+        <a href="/">ДИВИТИСЬ ВІДЕО</a>
+      </div>
+    </section>
+    <!-- news -->
+    <section id="news">
+      <h2>Останні Новини</h2>
+      <hr />
+      <div class="news-columns">
+        <div class="news-container">
+          <!-- 3Д в брендингу -->
+          <div class="news-item">
+            <img
+              src="images/news-item-1.svg"
+              alt="3D"
+              width="270"
+              height="443"
+            />
+            <img
+              class="news-item-hover-mask"
+              src="images/news-item-mask-270-443.svg"
+              alt="mask"
+              width="270"
+              height="443"
+            />
+            <a class="news-info-button" href="/">
+              <img
+                src="images/news-info-button.svg"
+                alt="info"
+                width="28"
+                height="28"
+              />
+            </a>
+            <h3>3Д в брендингу</h3>
+          </div>
+          <!-- Унікальний дизайн -->
+          <div class="news-item">
+            <img
+              src="images/news-item-2.svg"
+              alt="design"
+              width="270"
+              height="167"
+            />
+            <img
+              class="news-item-hover-mask"
+              src="images/news-item-mask-270-167.svg"
+              alt="mask"
+              width="270"
+              height="167"
+            />
+            <a class="news-info-button" href="/">
+              <img
+                src="images/news-info-button.svg"
+                alt="info"
+                width="28"
+                height="28"
+              />
+            </a>
+            <h3>Унікальний дизайн</h3>
+          </div>
+          <!-- Контекстна реклама -->
+          <div class="news-item">
+            <img
+              src="images/news-item-3.svg"
+              alt="publicity"
+              width="270"
+              height="341"
+            />
+            <img
+              class="news-item-hover-mask"
+              src="images/news-item-mask-270-341.svg"
+              alt="mask"
+              width="270"
+              height="341"
+            />
+            <a class="news-info-button" href="/">
+              <img
+                src="images/news-info-button.svg"
+                alt="info"
+                width="28"
+                height="28"
+              />
+            </a>
+            <h3>Контекстна реклама</h3>
+          </div>
+          <!-- Погляд зі сторони -->
+          <div class="news-item">
+            <img
+              src="images/news-item-4.svg"
+              alt="view"
+              width="270"
+              height="341"
+            />
+            <img
+              class="news-item-hover-mask"
+              src="images/news-item-mask-270-341.svg"
+              alt="mask"
+              width="270"
+              height="341"
+            />
+            <a class="news-info-button" href="/">
+              <img
+                src="images/news-info-button.svg"
+                alt="info"
+                width="28"
+                height="28"
+              />
+            </a>
+            <h3>Погляд зі сторони</h3>
+          </div>
+          <!-- Графіка -->
+          <div class="news-item">
+            <img
+              src="images/news-item-5.svg"
+              alt="graphics"
+              width="270"
+              height="383"
+            />
+            <img
+              class="news-item-hover-mask"
+              src="images/news-item-mask-270-383.svg"
+              alt="mask"
+              width="270"
+              height="383"
+            />
+            <a class="news-info-button" href="/">
+              <img
+                src="images/news-info-button.svg"
+                alt="info"
+                width="28"
+                height="28"
+              />
+            </a>
+            <h3>Графіка</h3>
+          </div>
+          <!-- Соц мережі та їх користь -->
+          <div class="news-item">
+            <img
+              src="images/news-item-6.svg"
+              alt="networks"
+              width="270"
+              height="198"
+            />
+            <img
+              class="news-item-hover-mask"
+              src="images/news-item-mask-270-198.svg"
+              alt="mask"
+              width="270"
+              height="198"
+            />
+            <a class="news-info-button" href="/">
+              <img
+                src="images/news-info-button.svg"
+                alt="info"
+                width="28"
+                height="28"
+              />
+            </a>
+            <h3>Соц мережі та їх користь</h3>
+          </div>
+          <!-- Корпоративна культура -->
+          <div class="news-item">
+            <img
+              src="images/news-item-7.svg"
+              alt="culture"
+              width="270"
+              height="210"
+            />
+            <img
+              class="news-item-hover-mask"
+              src="images/news-item-mask-270-210.svg"
+              alt="mask"
+              width="270"
+              height="210"
+            />
+            <a class="news-info-button" href="/">
+              <img
+                src="images/news-info-button.svg"
+                alt="info"
+                width="28"
+                height="28"
+              />
+            </a>
+            <h3>Корпоративна культура</h3>
+          </div>
+          <!-- Ексклюзивність -->
+          <div class="news-item">
+            <img
+              src="images/news-item-8.svg"
+              alt="exclusivity"
+              width="270"
+              height="436"
+            />
+            <img
+              class="news-item-hover-mask"
+              src="images/news-item-mask-270-436.svg"
+              alt="mask"
+              width="270"
+              height="436"
+            />
+            <a class="news-info-button" href="/">
+              <img
+                src="images/news-info-button.svg"
+                alt="info"
+                width="28"
+                height="28"
+              />
+            </a>
+            <h3>Ексклюзивність</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial -->
+    <section id="testimonial">
+      <img
+        class="double-quotes"
+        src="images/testimonial-double-quotes.svg"
+        alt="double quotes"
+        width="32"
+        height="27"
+      />
+      <blockquote class="quote">
+        <p>Хто володіє інформацією, той володіє світом</p>
+        <cite>- Вінстон Черчілль</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p>
+          Якщо треба створити або підняти імідж компанії, то
+          <span>діджитал-маркетинг</span> є найбільш влучним
+        </p>
+        <cite>- Маргарита Акулич</cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p>Якщо тебе немає в Інтернеті, то ти не існуєш</p>
+        <cite>- Білл Гейтс</cite>
+      </blockquote>
+      <div class="quote-pagination">
+        <div class="quote-circle" onclick="currentQuote(1)"></div>
+        <div class="quote-circle" onclick="currentQuote(2)"></div>
+        <div class="quote-circle" onclick="currentQuote(3)"></div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src="./images/footer-logo.svg"
+            alt="DI GI"
+            width="84"
+            height="60"
+          />
+        </div>
+        <div class="footer-content">
+          <p>
+            Ми хотіли б почути все про ваш проєкт. <br />
+            Звʼяжіться з нами!
+          </p>
+          <div class="footer-social">
+            <a href="/">
+              <div class="footer-social-link">
+                <img
+                  src="./images/footer-social-facebook.svg"
+                  alt="facebook"
+                  width="12"
+                  height="16"
+                />
+              </div>
+            </a>
+            <a href="/">
+              <div class="footer-social-link">
+                <img
+                  src="./images/footer-social-google.svg"
+                  alt="facebook"
+                  width="26"
+                  height="14"
+                />
+              </div>
+            </a>
+            <a href="/">
+              <div class="footer-social-link">
+                <img
+                  src="./images/footer-social-twitter.svg"
+                  alt="facebook"
+                  width="20"
+                  height="14"
+                />
+              </div>
+            </a>
+            <a href="/">
+              <div class="footer-social-link">
+                <img
+                  src="./images/footer-social-p.svg"
+                  alt="p"
+                  width="18"
+                  height="14"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="footer-widgets">
+            <div class="footer-widgets-block">
+              <h3>КОНТАКТИ</h3>
+              <a href="tel:+3805555566">+380 555 55 66</a>
+              <a href="mailto:digi@gmail.com">digi@gmail.com</a>
+            </div>
+            <div class="footer-widgets-block">
+              <h3>АДРЕСА</h3>
+              <a href="/">
+                Пр. Науки 107 <br />
+                Kиїв / Україна
+              </a>
+            </div>
+            <div class="footer-widgets-block">
+              <h3>ДОПОМОГА</h3>
+              <a href="/">Як з нами звʼязатись?</a>
+              <a href="/">Що таке діджитал?</a>
+              <a href="/">Вартість послуг</a>
+            </div>
+            <div class="footer-widgets-block">
+              <h3>МЕНЮ</h3>
+              <a href="#recent-work">Наші проєкти</a>
+              <a href="#video-block">Команда</a>
+              <a href="#news">Блог</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="footer-link-up" href="#header">
+        <p>НАГОРУ</p>
+        <img
+          src="./images/fotter-link-up.svg"
+          alt="UP"
+          width="16"
+          height="16"
+        />
+      </a>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
