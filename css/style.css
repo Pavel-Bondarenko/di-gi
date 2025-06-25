@@ -113,20 +113,28 @@ header {
 
 /* intro */
 #intro {
-  background-image: url("../images/intro-rectangle.svg"),
-    url("../images/intro-bg.png");
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
 }
 
-.slide-container,
-.slide {
+.intro-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
+}
+
+.slide-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slide h1 {
@@ -141,6 +149,12 @@ header {
   font-weight: 400;
   color: var(--second-main-color);
   text-align: center;
+}
+
+.slide hr {
+  width: 61px;
+  height: 8px;
+  background-color: var(--service-heading-color);
 }
 
 .slide-button {
@@ -166,10 +180,15 @@ header {
   border: 1px solid var(--first-main-color);
   border-radius: 8px;
   background-color: var(--first-main-color);
+  cursor: pointer;
 }
 
 .arrows {
   width: 72px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .arrow {
@@ -177,6 +196,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .back {
@@ -195,6 +215,7 @@ header {
   #intro {
     width: var(--mobile-screen-width);
     height: 192px;
+    background-image: url("../images/intro-bg-320.svg");
   }
 
   .slide h1 {
@@ -209,8 +230,8 @@ header {
     display: none;
   }
 
-  .pagination {
-    margin-top: 60px;
+  .slide hr {
+    margin: 20px 0 35px;
   }
 
   .arrows {
@@ -222,6 +243,7 @@ header {
   #intro {
     width: var(--portrait-screen-width);
     height: 386px;
+    background-image: url("../images/intro-bg-640.png");
   }
 
   .slide h1 {
@@ -233,6 +255,10 @@ header {
 
   .slide p {
     display: none;
+  }
+
+  .slide hr {
+    margin-top: 8px;
   }
 
   .slide-button {
@@ -260,6 +286,8 @@ header {
   #intro {
     width: var(--tablet-portrait-screen-width);
     height: 465px;
+    background-image: url("../images/intro-rectangle.svg"),
+      url("../images/intro-bg-768.png");
   }
 
   .slide h1 {
@@ -273,12 +301,18 @@ header {
     letter-spacing: 0px;
     margin-top: 28px;
   }
+
+  .slide hr {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   #intro {
     width: var(--desktop-screen-width);
     height: 618px;
+    background-image: url("../images/intro-rectangle.svg"),
+      url("../images/intro-bg-1024.png");
   }
 
   .slide h1 {
@@ -297,6 +331,8 @@ header {
   #intro {
     width: var(--desktop-hd-screen-width);
     height: 668px;
+    background-image: url("../images/intro-rectangle.svg"),
+      url("../images/intro-bg-1440.png");
   }
 
   .slide h1 {
@@ -1691,10 +1727,22 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.quotes {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 .quote {
+  min-width: 100%;
+  box-sizing: border-box;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .quote p {
@@ -1729,6 +1777,7 @@ header {
   border: 1px solid var(--first-main-color);
   border-radius: 8px;
   background-color: var(--first-main-color);
+  cursor: pointer;
 }
 
 .active-quote-circle {
@@ -1745,12 +1794,9 @@ header {
     margin-top: 60px;
   }
 
-  .quote {
-    width: 275px;
-  }
-
   .quote p {
     height: 210px;
+    width: 275px;
     font-size: 24px;
   }
 
@@ -1773,12 +1819,9 @@ header {
     margin-top: 60px;
   }
 
-  .quote {
-    width: 550px;
-  }
-
   .quote p {
     height: 138px;
+    width: 550px;
     font-size: 32px;
   }
 
@@ -1796,7 +1839,7 @@ header {
     width: var(--tablet-portrait-screen-width);
   }
 
-  .quote {
+  .quote p {
     width: 687px;
   }
 }
@@ -1811,12 +1854,9 @@ header {
     margin-top: 100px;
   }
 
-  .quote {
-    width: 760px;
-  }
-
   .quote p {
     height: 79px;
+    width: 760px;
   }
 
   .quote-pagination {

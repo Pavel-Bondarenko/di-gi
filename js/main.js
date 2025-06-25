@@ -2,55 +2,117 @@ $(function () {
 
 });
 
-let slideIndex = 2;
-showSlides(slideIndex);
+// intro slider
+const slides = document.querySelector('.slide-container');
+const slide = document.querySelectorAll('.slide');
+const circles = document.querySelectorAll('.circle');
+const totalSlides = slide.length;
+const autoSlideIntervalInMillis = 7000;
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+let currentSlideIndex = 1;
+updateSlider();
+
+let autoSlideInterval = setInterval(nextSlideWithoutRestart, autoSlideIntervalInMillis);
+
+function restartAutoSlideInterval() {
+  clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(nextSlideWithoutRestart, autoSlideIntervalInMillis);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  let circles = document.getElementsByClassName("circle");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+function nextSlideWithoutRestart() {
+  if (currentSlideIndex < totalSlides - 1) {
+    currentSlideIndex++;
+  } else {
+    currentSlideIndex = 0;
   }
+  updateSlider();
+}
+
+function updateSlider() {
+  updateSliderPosition();
+  updateActiveCircle();
+}
+
+function updateSliderPosition() {
+  slides.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+}
+
+function updateActiveCircle() {
   for (i = 0; i < circles.length; i++) {
     circles[i].className = circles[i].className.replace(" active", "");
   }
-  slides[slideIndex - 1].style.display = "block";
-  circles[slideIndex - 1].className += " active";
+  circles[currentSlideIndex].className += " active";
 }
 
-let quoteIndex = 2;
-showQuotes(quoteIndex);
-
-// Thumbnail image controls
-function currentQuote(n) {
-  showQuotes(quoteIndex = n);
+function nextSlide() {
+  nextSlideWithoutRestart();
+  restartAutoSlideInterval();
 }
 
-function showQuotes(n) {
-  let i;
-  let quotes = document.getElementsByClassName("quote");
-  let quoteCircles = document.getElementsByClassName("quote-circle");
-  if (n > quotes.length) { quoteIndex = 1 }
-  if (n < 1) { quoteIndex = quotes.length }
-  for (i = 0; i < quotes.length; i++) {
-    quotes[i].style.display = "none";
+function previousSlide() {
+  if (currentSlideIndex > 0) {
+    currentSlideIndex--;
+  } else {
+    currentSlideIndex = totalSlides - 1;
   }
+  restartAutoSlideInterval();
+  updateSlider();
+}
+
+function currentSlide(n) {
+  if (n >= 0 && n < totalSlides) {
+    currentSlideIndex = n;
+    restartAutoSlideInterval();
+    updateSlider();
+  }
+}
+
+// quote slider
+const quotes = document.querySelector('.quotes');
+const quote = document.querySelectorAll('.quote');
+const quoteCircles = document.querySelectorAll('.quote-circle');
+const totalQuotes = quote.length;
+const autoQuoteIntervalInMillis = 7000;
+
+let currentQuoteIndex = 1;
+updateQuotes();
+
+let autoQuoteInterval = setInterval(nextQuote, autoQuoteIntervalInMillis);
+
+function restartAutoQuoteInterval() {
+  clearInterval(autoQuoteInterval);
+  autoQuoteInterval = setInterval(nextQuote, autoQuoteIntervalInMillis);
+}
+
+function nextQuote() {
+  if (currentQuoteIndex < totalSlides - 1) {
+    currentQuoteIndex++;
+  } else {
+    currentQuoteIndex = 0;
+  }
+  updateQuotes();
+}
+
+function updateQuotes() {
+  updateQuotePosition();
+  updateActiveQuoteCircle();
+}
+
+function updateQuotePosition() {
+  quotes.style.transform = `translateX(-${currentQuoteIndex * 100}%)`;
+}
+
+function updateActiveQuoteCircle() {
   for (i = 0; i < quoteCircles.length; i++) {
     quoteCircles[i].className = quoteCircles[i].className.replace(" active-quote-circle", "");
   }
-  quotes[quoteIndex - 1].style.display = "block";
-  quoteCircles[quoteIndex - 1].className += " active-quote-circle";
+  quoteCircles[currentQuoteIndex].className += " active-quote-circle";
+}
+
+function currentQuote(n) {
+  if (n >= 0 && n < totalSlides) {
+    currentQuoteIndex = n;
+    updateQuotes();
+    restartAutoQuoteInterval();
+  }
 }

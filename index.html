@@ -30,46 +30,49 @@
     </header>
     <!-- intro -->
     <section id="intro">
-      <div class="arrows"></div>
-      <div class="slide-container">
-        <div class="slide">
-          <h1>ПРАЦЮЙ<br />ВІРТУАЛЬНО</h1>
-          <p>
-            Di Gi — це діджитал агенція повного циклу, спрямована на
-            найкращий<br />
-            результат наших клієнтів в маркетингу, продажах та управленні
-          </p>
-          <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
-        </div>
+      <div class="intro-content">
+        <div class="slide-container">
+          <div class="slide">
+            <h1>ПРАЦЮЙ<br />ВІРТУАЛЬНО</h1>
+            <p>
+              Di Gi — це діджитал агенція повного циклу, спрямована на
+              найкращий<br />
+              результат наших клієнтів в маркетингу, продажах та управленні
+            </p>
+            <hr />
+            <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
+          </div>
 
-        <div class="slide">
-          <h1>МИСЛИ<br />ГЛОБАЛЬНО</h1>
-          <p>
-            Di Gi — це діджитал агенція повного циклу, спрямована на
-            найкращий<br />
-            результат наших клієнтів в маркетингу, продажах та управленні
-          </p>
-          <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
-        </div>
+          <div class="slide">
+            <h1>МИСЛИ<br />ГЛОБАЛЬНО</h1>
+            <p>
+              Di Gi — це діджитал агенція повного циклу, спрямована на
+              найкращий<br />
+              результат наших клієнтів в маркетингу, продажах та управленні
+            </p>
+            <hr />
+            <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
+          </div>
 
-        <div class="slide">
-          <h1>ЖИВИ<br />УНІКАЛЬНО</h1>
-          <p>
-            Di Gi — це діджитал агенція повного циклу, спрямована на
-            найкращий<br />
-            результат наших клієнтів в маркетингу, продажах та управленні
-          </p>
-          <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
+          <div class="slide">
+            <h1>ЖИВИ<br />УНІКАЛЬНО</h1>
+            <p>
+              Di Gi — це діджитал агенція повного циклу, спрямована на
+              найкращий<br />
+              результат наших клієнтів в маркетингу, продажах та управленні
+            </p>
+            <hr />
+            <a href="/"><div class="slide-button">ДЕТАЛЬНІШЕ</div></a>
+          </div>
         </div>
-
         <div class="pagination">
+          <div class="circle" onclick="currentSlide(0)"></div>
           <div class="circle" onclick="currentSlide(1)"></div>
           <div class="circle" onclick="currentSlide(2)"></div>
-          <div class="circle" onclick="currentSlide(3)"></div>
         </div>
       </div>
       <div class="arrows">
-        <div class="arrow back" onclick="plusSlides(-1)">
+        <div class="arrow back" onclick="previousSlide()">
           <img
             src="images/intro-back-arrow.svg"
             alt="Back"
@@ -77,7 +80,7 @@
             height="20"
           />
         </div>
-        <div class="arrow forward" onclick="plusSlides(1)">
+        <div class="arrow forward" onclick="nextSlide()">
           <img
             src="images/intro-forward-arrow.svg"
             alt="Forward"
@@ -633,25 +636,27 @@
         width="32"
         height="27"
       />
-      <blockquote class="quote">
-        <p>Хто володіє інформацією, той володіє світом</p>
-        <cite>- Вінстон Черчілль</cite>
-      </blockquote>
-      <blockquote class="quote">
-        <p>
-          Якщо треба створити або підняти імідж компанії, то
-          <span>діджитал-маркетинг</span> є найбільш влучним
-        </p>
-        <cite>- Маргарита Акулич</cite>
-      </blockquote>
-      <blockquote class="quote">
-        <p>Якщо тебе немає в Інтернеті, то ти не існуєш</p>
-        <cite>- Білл Гейтс</cite>
-      </blockquote>
+      <div class="quotes">
+        <blockquote class="quote">
+          <p>Хто володіє інформацією, той володіє світом</p>
+          <cite>- Вінстон Черчілль</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>
+            Якщо треба створити або підняти імідж компанії, то
+            <span>діджитал-маркетинг</span> є найбільш влучним
+          </p>
+          <cite>- Маргарита Акулич</cite>
+        </blockquote>
+        <blockquote class="quote">
+          <p>Якщо тебе немає в Інтернеті, то ти не існуєш</p>
+          <cite>- Білл Гейтс</cite>
+        </blockquote>
+      </div>
       <div class="quote-pagination">
+        <div class="quote-circle" onclick="currentQuote(0)"></div>
         <div class="quote-circle" onclick="currentQuote(1)"></div>
         <div class="quote-circle" onclick="currentQuote(2)"></div>
-        <div class="quote-circle" onclick="currentQuote(3)"></div>
       </div>
     </section>
     <!-- footer -->
