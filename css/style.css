@@ -1745,6 +1745,12 @@ header {
   align-items: center;
 }
 
+.quote div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .quote p {
   font-family: var(--first-font-family);
   font-weight: 400;
@@ -1787,16 +1793,19 @@ header {
 @media only screen and (max-width: 639px) {
   #testimonial {
     width: var(--mobile-screen-width);
-    height: 420px;
+    height: 460px;
   }
 
   .double-quotes {
     margin-top: 60px;
   }
 
-  .quote p {
+  .quote div {
     height: 210px;
     width: 275px;
+  }
+
+  .quote p {
     font-size: 24px;
   }
 
@@ -1819,9 +1828,12 @@ header {
     margin-top: 60px;
   }
 
-  .quote p {
+  .quote div {
     height: 138px;
     width: 550px;
+  }
+
+  .quote p {
     font-size: 32px;
   }
 
@@ -1839,7 +1851,7 @@ header {
     width: var(--tablet-portrait-screen-width);
   }
 
-  .quote p {
+  .quote div {
     width: 687px;
   }
 }
@@ -1854,7 +1866,7 @@ header {
     margin-top: 100px;
   }
 
-  .quote p {
+  .quote div {
     height: 79px;
     width: 760px;
   }
